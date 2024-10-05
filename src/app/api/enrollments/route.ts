@@ -162,6 +162,9 @@ export const DELETE = async (request: NextRequest) => {
 
   const prisma = getPrisma();
   // Perform data delete
+  await prisma.enrollment.delete({
+    where: { courseNo_studentId: {courseNo, studentId:studentId} },
+  })
 
   return NextResponse.json({
     ok: true,
