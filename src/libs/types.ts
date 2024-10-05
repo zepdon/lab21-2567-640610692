@@ -40,3 +40,8 @@ export interface Database {
   enrollments: Enrollment[];
   users: User[];
 }
+export interface mapEnrollment{
+  courseNo: string;
+  title: string;
+  course: Course;
+}
